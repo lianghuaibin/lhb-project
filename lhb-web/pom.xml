@@ -107,6 +107,11 @@
         </dependency>
         <dependency>
             <groupId>com.lhb</groupId>
+            <artifactId>lhb-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lhb</groupId>
             <artifactId>lhb-service</artifactId>
             <version>${project.version}</version>
         </dependency>
