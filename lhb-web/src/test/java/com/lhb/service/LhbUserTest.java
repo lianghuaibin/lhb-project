@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.lhb.BaseTest;
 import com.lhb.common.util.LogUtil;
 import com.lhb.domain.pojo.LhbUser;
-import com.lhb.wechat.util.SystemConstant;
+import com.lhb.utils.SystemConstant;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -44,12 +44,17 @@ public class LhbUserTest extends BaseTest{
     public void testFindById() throws Exception {
         LhbUser user= lhbUserService.findById(1L);
         System.out.println(JSON.toJSONString(user));
-        System.out.println(systemConstant.getAppID());
+        System.out.println(systemConstant.getAppsecret());
         LogUtil.paramAndResult("123","12312","41312");
     }
     @Test
     public void testFind(){
         List<LhbUser> list = lhbUserService.find(null);
         System.out.println(JSON.toJSONString(list));
+    }
+    @Test
+    public void log(){
+        logger.error("123214");
+        LogUtil.paramAndResult("1111","2222","3333");
     }
 }

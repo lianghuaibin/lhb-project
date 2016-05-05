@@ -1,5 +1,6 @@
 package com.lhb.wechat.util;
 
+import com.lhb.utils.SystemConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

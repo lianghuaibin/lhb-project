@@ -15,6 +15,7 @@ import com.lhb.wechat.util.StringDomain;
 import com.lhb.wechat.util.TimeUtil;
 import com.lhb.wechat.util.WcUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -30,6 +31,7 @@ import java.util.Map;
  * @author lianghuaibin
  * @since 2016/5/5
  */
+@Controller
 public class WcController {
 
     @Autowired

@@ -1,4 +1,4 @@
-package com.lhb.wechat.util;
+package com.lhb.utils;
 
 import org.springframework.stereotype.Component;
 

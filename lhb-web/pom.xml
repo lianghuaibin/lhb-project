@@ -121,14 +121,18 @@
             </activation>
             <properties>
                 <!-- 数据库连接配置 -->
-                <jr.database.file>props/dev/jdbc.properties</jr.database.file>
+                <jr.database.file>props/dev/db.properties</jr.database.file>
+                <!-- 系统参数 -->
+                <jr.database.file>props/dev/important.properties</jr.database.file>
             </properties>
         </profile>
         <profile>
             <id>pro</id>
             <properties>
                 <!-- 数据库连接配置 -->
-                <jr.database.file>props/pro/jdbc.properties</jr.database.file>
+                <jr.database.file>props/pro/db.properties</jr.database.file>
+                <!-- 系统参数 -->
+                <jr.database.file>props/pro/important.properties</jr.database.file>
             </properties>
         </profile>
     </profiles>

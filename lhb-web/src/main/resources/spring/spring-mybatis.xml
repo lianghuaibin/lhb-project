@@ -52,17 +52,11 @@
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
-	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.lhb.dao.impl" />
-		<property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate"></property>
-	</bean>
-
 	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
-	<!--<bean id="transactionManager"
+	<bean id="transactionManager"
 		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>-->
+		<property name="dataSource" ref="defaultMysqlDataSource" />
+	</bean>
 
 
 
