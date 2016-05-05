@@ -14,6 +14,18 @@
 
     <build>
         <finalName>lhb-web</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--<include>props/*.properties</include>-->
+                    <!--<include>spring/*.xml</include>
+                    <include>log4j.properties</include>
+                    <include>velocity/velocity.properties</include>-->
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
     <dependencies>
@@ -117,7 +129,6 @@
         </dependency>
     </dependencies>
 
-
     <profiles>
         <profile>
             <id>dev</id>
@@ -126,18 +137,25 @@
             </activation>
             <properties>
                 <!-- 数据库连接配置 -->
-                <jr.database.file>props/dev/db.properties</jr.database.file>
+                <!--<jr.database.file>props/dev/db.propertoes</jr.database.file>-->
+                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+                <mysql.default.url>jdbc:mysql://123.57.69.90:3306/lhb</mysql.default.url>
+                <mysql.default.username>root</mysql.default.username>
+                <mysql.default.password>Bin*#220807#</mysql.default.password>
                 <!-- 系统参数 -->
-                <jr.database.file>props/dev/important.properties</jr.database.file>
+                <jr.important.file>props/dev/important.properties</jr.important.file>
             </properties>
         </profile>
         <profile>
             <id>pro</id>
             <properties>
                 <!-- 数据库连接配置 -->
-                <jr.database.file>props/pro/db.properties</jr.database.file>
+                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+                <mysql.default.url>jdbc:mysql://123.57.69.90:3306/lhb</mysql.default.url>
+                <mysql.default.username>root</mysql.default.username>
+                <mysql.default.password>Bin*#220807#</mysql.default.password>
                 <!-- 系统参数 -->
-                <jr.database.file>props/pro/important.properties</jr.database.file>
+                <jr.important.file>props/pro/important.properties</jr.important.file>
             </properties>
         </profile>
     </profiles>
