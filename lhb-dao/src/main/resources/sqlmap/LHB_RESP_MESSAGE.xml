@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lhb_resp_message">
+
+    <sql id="wherecontation">
+        /* 返回消息ID */
+        <if test="id!=null and id!=''">
+            AND ID = #{id}
+        </if>
+        /* 返回消息内容 */
+        <if test="msgContent!=null and msgContent!=''">
+            AND MSG_CONTENT = #{msgContent}
+        </if>
+        /* 返回消息类型(text:文本;music:音乐;news:图文;) */
+        <if test="msgType!=null and msgType!=''">
+            AND MSG_TYPE = #{msgType}
+        </if>
+        /* 消息标题 */
+        <if test="msgTitle!=null and msgTitle!=''">
+            AND MSG_TITLE = #{msgTitle}
+        </if>
+        /* 消息图片链接 */
+        <if test="msgPic!=null and msgPic!=''">
+            AND MSG_PIC = #{msgPic}
+        </if>
+        /* 点击跳转链接 */
+        <if test="skipUrl!=null and skipUrl!=''">
+            AND SKIP_URL = #{skipUrl}
+        </if>
+    </sql>
+
+    <!-- 插入 -->
+    <insert id="insert" parameterType="LhbRespMessage" useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO lhb_resp_message
+        (
+            ID,    /* 返回消息ID */
+            MSG_CONTENT,    /* 返回消息内容 */
+            MSG_TYPE,    /* 返回消息类型(text:文本;music:音乐;news:图文;) */
+            MSG_TITLE,    /* 消息标题 */
+            MSG_PIC,    /* 消息图片链接 */
+            SKIP_URL    /* 点击跳转链接 */
+        )
+        VALUES
+        (
+            #{id},
+            #{msgContent},
+            #{msgType},
+            #{msgTitle},
+            #{msgPic},
+            #{skipUrl}
+        )
+    </insert>
+
+    <!-- 更新 -->
+    <update id="update" parameterType="LhbRespMessage" >
+        UPDATE lhb_resp_message
+        <trim prefix=" SET " suffixOverrides=",">
+            /* 返回消息内容 */
+            <if test="msgContent!=null and msgContent!=''">
+                MSG_CONTENT = #{msgContent},
+            </if>
+            /* 返回消息类型(text:文本;music:音乐;news:图文;) */
+            <if test="msgType!=null and msgType!=''">
+                MSG_TYPE = #{msgType},
+            </if>
+            /* 消息标题 */
+            <if test="msgTitle!=null and msgTitle!=''">
+                MSG_TITLE = #{msgTitle},
+            </if>
+            /* 消息图片链接 */
+            <if test="msgPic!=null and msgPic!=''">
+                MSG_PIC = #{msgPic},
+            </if>
+            /* 点击跳转链接 */
+            <if test="skipUrl!=null and skipUrl!=''">
+                SKIP_URL = #{skipUrl},
+            </if>
+            /* 返回消息ID */
+            <if test="id!=null and id!=''">
+                ID = #{id},
+            </if>
+        </trim>
+        WHERE ID = #{id}
+    </update>
+
+    <!-- 根据主键查找 -->
+    <select id="findById" parameterType="java.lang.Long" resultType="LhbRespMessage">
+        SELECT
+            ID AS id,  /* 返回消息ID */
+            MSG_CONTENT AS msgContent,  /* 返回消息内容 */
+            MSG_TYPE AS msgType,  /* 返回消息类型(text:文本;music:音乐;news:图文;) */
+            MSG_TITLE AS msgTitle,  /* 消息标题 */
+            MSG_PIC AS msgPic,  /* 消息图片链接 */
+            SKIP_URL AS skipUrl  /* 点击跳转链接 */
+        FROM lhb_resp_message
+        WHERE ID = #{id}
+    </select>
+
+    <!-- 查询 -->
+    <select id="find" parameterType="LhbRespMessageQuery" resultType="LhbRespMessage">
+        SELECT
+            ID AS id,  /* 返回消息ID */
+            MSG_CONTENT AS msgContent,  /* 返回消息内容 */
+            MSG_TYPE AS msgType,  /* 返回消息类型(text:文本;music:音乐;news:图文;) */
+            MSG_TITLE AS msgTitle,  /* 消息标题 */
+            MSG_PIC AS msgPic,  /* 消息图片链接 */
+            SKIP_URL AS skipUrl  /* 点击跳转链接 */
+        FROM lhb_resp_message
+        WHERE 1=1
+        <include refid="wherecontation"/>
+    </select>
+</mapper>

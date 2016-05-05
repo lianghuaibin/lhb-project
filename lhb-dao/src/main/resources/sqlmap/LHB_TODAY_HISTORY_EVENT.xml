@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lhb_today_history_event">
+
+    <sql id="wherecontation">
+        /* 主键ID */
+        <if test="id!=null and id!=''">
+            AND ID = #{id}
+        </if>
+        /* 发生的时间（M月d日） */
+        <if test="datetag!=null and datetag!=''">
+            AND DATETAG = #{datetag}
+        </if>
+        /* 内容 */
+        <if test="content!=null and content!=''">
+            AND CONTENT = #{content}
+        </if>
+    </sql>
+
+    <!-- 插入 -->
+    <insert id="insert" parameterType="LhbTodayHistoryEvent" useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO lhb_today_history_event
+        (
+            ID,    /* 主键ID */
+            DATETAG,    /* 发生的时间（M月d日） */
+            CONTENT    /* 内容 */
+        )
+        VALUES
+        (
+            #{id},
+            #{datetag},
+            #{content}
+        )
+    </insert>
+
+    <!-- 更新 -->
+    <update id="update" parameterType="LhbTodayHistoryEvent" >
+        UPDATE lhb_today_history_event
+        <trim prefix=" SET " suffixOverrides=",">
+            /* 发生的时间（M月d日） */
+            <if test="datetag!=null and datetag!=''">
+                DATETAG = #{datetag},
+            </if>
+            /* 内容 */
+            <if test="content!=null and content!=''">
+                CONTENT = #{content},
+            </if>
+            /* 主键ID */
+            <if test="id!=null and id!=''">
+                ID = #{id},
+            </if>
+        </trim>
+        WHERE ID = #{id}
+    </update>
+
+    <!-- 根据主键查找 -->
+    <select id="findById" parameterType="java.lang.Long" resultType="LhbTodayHistoryEvent">
+        SELECT
+            ID AS id,  /* 主键ID */
+            DATETAG AS datetag,  /* 发生的时间（M月d日） */
+            CONTENT AS content  /* 内容 */
+        FROM lhb_today_history_event
+        WHERE ID = #{id}
+    </select>
+
+    <!-- 查询 -->
+    <select id="find" parameterType="LhbTodayHistoryEventQuery" resultType="LhbTodayHistoryEvent">
+        SELECT
+            ID AS id,  /* 主键ID */
+            DATETAG AS datetag,  /* 发生的时间（M月d日） */
+            CONTENT AS content  /* 内容 */
+        FROM lhb_today_history_event
+        WHERE 1=1
+        <include refid="wherecontation"/>
+    </select>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.lhb.domain.pojo.LhbUser" alias="LhbUser"/>
+		<typeAlias type="com.lhb.domain.query.LhbUserQuery" alias="LhbUserQuery"/>
+		<typeAlias type="com.lhb.domain.pojo.LhbRespMessage" alias="LhbRespMessage"/>
+		<typeAlias type="com.lhb.domain.query.LhbRespMessageQuery" alias="LhbRespMessageQuery"/>
+		<typeAlias type="com.lhb.domain.pojo.LhbTodayHistoryEvent" alias="LhbTodayHistoryEvent"/>
+		<typeAlias type="com.lhb.domain.query.LhbTodayHistoryEventQuery" alias="LhbTodayHistoryEventQuery"/>
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="sqlmap/LHB_USER.xml"/>
+		<mapper resource="sqlmap/LHB_RESP_MESSAGE.xml"/>
+		<mapper resource="sqlmap/LHB_TODAY_HISTORY_EVENT.xml"/>
+		<mapper resource="sqlmap/LHB_JOKE.xml"/>
+		<mapper resource="sqlmap/LHB_ROMANTIC.xml"/>
+
+	</mappers>
+
+</configuration>
