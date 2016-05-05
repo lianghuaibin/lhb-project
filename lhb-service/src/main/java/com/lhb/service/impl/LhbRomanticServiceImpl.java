@@ -58,6 +58,11 @@ public class LhbRomanticServiceImpl implements LhbRomanticService {
         return this.lhbRomanticDao.findById(id);
     }
 
+    @Override
+    public LhbRomantic findByRandom() {
+        return lhbRomanticDao.findByRandom();
+    }
+
     /**
     * 查询
     * @param lhbRomantic

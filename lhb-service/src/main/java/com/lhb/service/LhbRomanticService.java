@@ -36,6 +36,8 @@ public interface LhbRomanticService {
     */
     LhbRomantic findById(Long id);
 
+    LhbRomantic findByRandom();
+
     /**
     * 查询
     * @param lhbRomantic

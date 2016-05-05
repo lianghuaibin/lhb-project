@@ -51,6 +51,10 @@
         FROM lhb_joke
         WHERE ID = #{id}
     </select>
+    <!-- 随机获取一条数据 -->
+    <select id="findByRandom" resultType="com.lhb.domain.pojo.LhbJoke">
+        SELECT id, content FROM lhb_joke ORDER BY rand() limit 1
+    </select>
 
     <!-- 查询 -->
     <select id="find" parameterType="com.lhb.domain.query.LhbJokeQuery" resultType="com.lhb.domain.pojo.LhbJoke">

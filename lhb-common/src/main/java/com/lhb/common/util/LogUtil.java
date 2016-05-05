@@ -13,6 +13,12 @@ public class LogUtil {
 	
 	private static Log logger = LogFactory.getLog(LogUtil.class);
 	private static int logLevel = 4;
+	public static void info(String str){
+		logger.info(str);
+	}
+	public static void error(String str){
+		logger.error(str);
+	}
 	/**
 	 * 打印异常日志
 	 * @param e - 异常输出

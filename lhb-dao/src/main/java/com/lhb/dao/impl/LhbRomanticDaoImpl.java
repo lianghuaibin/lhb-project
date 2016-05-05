@@ -60,4 +60,9 @@ public class LhbRomanticDaoImpl extends BaseDao implements LhbRomanticDao {
     public LhbRomantic findById(Long id) {
         return (LhbRomantic) this.sqlSessionTemplate.selectOne("lhb_romantic.findById", id);
     }
+
+    @Override
+    public LhbRomantic findByRandom() {
+        return sqlSessionTemplate.selectOne("lhb_romantic.findByRandom");
+    }
 }

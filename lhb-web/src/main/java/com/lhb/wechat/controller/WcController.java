@@ -114,11 +114,11 @@ public class WcController {
                         message = messageService.getTextPushMsg(requestMap);
                         break;
                     case 4:
-                        requestMap.put("respMessage","\uE412"+lhbJokeService.findById(1L).getContent());
+                        requestMap.put("respMessage", "\uE412" + lhbJokeService.findByRandom().getContent());
                         message = messageService.getTextPushMsg(requestMap);
                         break;
                     case 5:
-                        requestMap.put("respMessage",lhbRomanticService.findById(1L).getContent());
+                        requestMap.put("respMessage",lhbRomanticService.findByRandom().getContent());
                         message = messageService.getTextPushMsg(requestMap);
                         break;
                     case 6:
@@ -148,6 +148,7 @@ public class WcController {
             }
             resp.getWriter().print(message);
         } catch(Exception e){
+            LogUtil.error("微信回复信息异常");
             LogUtil.error(e);
         }
         LogUtil.paramAndResult("-URL-POST-end", requestMap==null?"":requestMap.toString(),message);

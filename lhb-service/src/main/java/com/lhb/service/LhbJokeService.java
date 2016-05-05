@@ -35,6 +35,11 @@ public interface LhbJokeService {
     * @return
     */
     LhbJoke findById(Long id);
+    /**
+     * 随机获取一条数据
+     * @return
+     */
+    LhbJoke findByRandom();
 
     /**
     * 查询

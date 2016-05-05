@@ -60,4 +60,9 @@ public class LhbJokeDaoImpl extends BaseDao implements LhbJokeDao {
     public LhbJoke findById(Long id) {
         return (LhbJoke) this.sqlSessionTemplate.selectOne("lhb_joke.findById", id);
     }
+
+    @Override
+    public LhbJoke findByRandom() {
+        return sqlSessionTemplate.selectOne("lhb_joke.findByRandom");
+    }
 }

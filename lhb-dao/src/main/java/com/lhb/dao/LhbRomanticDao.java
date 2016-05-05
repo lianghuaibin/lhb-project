@@ -33,6 +33,8 @@ public interface LhbRomanticDao {
     */
     LhbRomantic findById(Long id);
 
+    LhbRomantic findByRandom();
+
     /**
     * 查询
     * @param lhbRomantic

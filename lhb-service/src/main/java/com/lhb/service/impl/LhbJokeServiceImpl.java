@@ -58,6 +58,11 @@ public class LhbJokeServiceImpl implements LhbJokeService {
         return this.lhbJokeDao.findById(id);
     }
 
+    @Override
+    public LhbJoke findByRandom() {
+        return lhbJokeDao.findByRandom();
+    }
+
     /**
     * 查询
     * @param lhbJoke

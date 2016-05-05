@@ -33,6 +33,8 @@ public interface LhbJokeDao {
     */
     LhbJoke findById(Long id);
 
+    LhbJoke findByRandom();
+
     /**
     * 查询
     * @param lhbJoke
