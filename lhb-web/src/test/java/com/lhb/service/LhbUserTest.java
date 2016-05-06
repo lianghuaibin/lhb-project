@@ -44,7 +44,7 @@ public class LhbUserTest extends BaseTest{
     public void testFindById() throws Exception {
         LhbUser user= lhbUserService.findById(1L);
         System.out.println(JSON.toJSONString(user));
-        System.out.println(systemConstant.getAppsecret());
+        System.out.println(systemConstant.getServerAddr());
         LogUtil.paramAndResult("123","12312","41312");
     }
     @Test

@@ -15,7 +15,7 @@
 	<context:component-scan base-package="com.lhb.dao.**" />
 	<context:component-scan base-package="com.lhb.service.**" />
 	<context:component-scan base-package="com.lhb.wechat.**" />
-	<context:component-scan base-package="com.lhb.utils.**" />
+	<!--<context:component-scan base-package="com.lhb.utils.**" />-->
 
 	<!-- aop动态代理 -->
     <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->

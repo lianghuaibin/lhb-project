@@ -11,7 +11,7 @@ import com.lhb.service.LhbRomanticService;
 import com.lhb.service.LhbTodayHistoryEventService;
 import com.lhb.wechat.service.MessageService;
 import com.lhb.wechat.util.MessageUtil;
-import com.lhb.wechat.util.StringDomain;
+import com.lhb.utils.StringDomain;
 import com.lhb.wechat.util.TimeUtil;
 import com.lhb.wechat.util.WcUtil;
 import org.springframework.beans.factory.annotation.Autowired;

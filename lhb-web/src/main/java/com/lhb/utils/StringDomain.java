@@ -1,6 +1,6 @@
-package com.lhb.wechat.util;
+package com.lhb.utils;
 
-import com.lhb.utils.SystemConstant;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -47,7 +47,11 @@ public class StringDomain {
 	 */
 	public String getServiceLink(String action){
 		StringBuilder url = new StringBuilder(systemConstant.getServerAddr());
-		url.append(SystemConstant.CTX.split("/")[1]).append(action);
+		if(StringUtils.isNotBlank(SystemConstant.CTX) || StringUtils.contains(SystemConstant.CTX,"/")){
+			url.append(SystemConstant.CTX.split("/")[1]).append(action);
+		}else {
+			url.append(action);
+		}
 		return url.toString();
 	}
 	
