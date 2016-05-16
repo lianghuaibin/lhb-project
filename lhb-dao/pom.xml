@@ -11,7 +11,7 @@
     <artifactId>lhb-dao</artifactId>
     <packaging>jar</packaging>
 
-    <name>com.lhb</name>
+    <name>lhb-dao</name>
     <url>http://maven.apache.org</url>
 
     <properties>
