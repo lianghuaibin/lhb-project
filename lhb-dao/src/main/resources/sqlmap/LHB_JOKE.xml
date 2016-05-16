@@ -17,12 +17,10 @@
     <insert id="insert" parameterType="com.lhb.domain.pojo.LhbJoke" useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO lhb_joke
         (
-            ID,    /* 主键ID */
             CONTENT    /* 开心内容 */
         )
         VALUES
         (
-            #{id},
             #{content}
         )
     </insert>

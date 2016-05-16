@@ -37,7 +37,6 @@
     <insert id="insert" parameterType="LhbUser" useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO lhb_user
         (
-            ID,    /* 用户ID */
             ACCOUNT,    /* 用户账号 */
             USERNAME,    /* 用户姓名 */
             PASSWORD,    /* 登陆密码 */
@@ -47,7 +46,6 @@
         )
         VALUES
         (
-            #{id},
             #{account},
             #{username},
             #{password},

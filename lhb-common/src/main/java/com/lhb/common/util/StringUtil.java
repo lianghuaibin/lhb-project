@@ -1,4 +1,4 @@
-package com.lhb.wechat.util;
+package com.lhb.common.util;
 
 
 import java.io.UnsupportedEncodingException;

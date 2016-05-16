@@ -21,13 +21,11 @@
     <insert id="insert" parameterType="LhbTodayHistoryEvent" useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO lhb_today_history_event
         (
-            ID,    /* 主键ID */
             DATETAG,    /* 发生的时间（M月d日） */
             CONTENT    /* 内容 */
         )
         VALUES
         (
-            #{id},
             #{datetag},
             #{content}
         )

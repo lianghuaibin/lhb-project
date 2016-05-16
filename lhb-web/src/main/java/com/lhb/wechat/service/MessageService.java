@@ -5,8 +5,8 @@ import com.lhb.wechat.message.resp.Article;
 import com.lhb.wechat.message.resp.NewsMessage;
 import com.lhb.wechat.message.resp.TextMessage;
 import com.lhb.wechat.util.MessageUtil;
-import com.lhb.wechat.util.StringUtil;
-import com.lhb.wechat.util.TimeUtil;
+import com.lhb.common.util.StringUtil;
+import com.lhb.common.util.TimeUtil;
 import com.lhb.wechat.util.TuringRobot;
 import org.springframework.stereotype.Service;
 

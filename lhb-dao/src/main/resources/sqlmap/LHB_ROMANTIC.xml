@@ -17,12 +17,10 @@
     <insert id="insert" parameterType="com.lhb.domain.pojo.LhbRomantic" useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO lhb_romantic
         (
-            ID,    /* 主键ID */
             CONTENT    /* 内容 */
         )
         VALUES
         (
-            #{id},
             #{content}
         )
     </insert>

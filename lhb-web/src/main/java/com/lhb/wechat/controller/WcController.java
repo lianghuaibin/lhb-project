@@ -12,7 +12,7 @@ import com.lhb.service.LhbTodayHistoryEventService;
 import com.lhb.wechat.service.MessageService;
 import com.lhb.wechat.util.MessageUtil;
 import com.lhb.utils.StringDomain;
-import com.lhb.wechat.util.TimeUtil;
+import com.lhb.common.util.TimeUtil;
 import com.lhb.wechat.util.WcUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

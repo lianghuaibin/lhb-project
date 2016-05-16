@@ -23,7 +23,7 @@
 		</property>
 	</bean>-->
 	<!-- 注入系统参数 -->
-	<context:component-scan base-package="com.lhb.utils.**" />
+	<context:component-scan base-package="com.lhb.utils" />
 	<!--<context:property-override location="classpath:props/dev/important.properties" />-->
 	<context:property-override location="classpath*:${jr.important.file}" />
 
