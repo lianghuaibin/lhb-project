@@ -22,12 +22,7 @@
       data-0="background-position:0px 0px;" data-2000="background-position:0px -50px;">
 <div class="header">
     <div class="logo">
-        <%--<img style="width: 100px;height: 100px;border-radius: 50%" src="${basePath}/img/userInfo/150x150_head_portrait.jpg">
-        <div class="slogan">
-            <h2>梁怀宾</h2>
-            <p>欢迎光临我的小舍<br/>天行健，君子以自强不息！</p>
-        </div>--%>
-        <img style="width: 100px;height: 100px;border-radius: 50%" src="${userResume.headPortrait}">
+        <img style="width: 100px;height: 100px;border-radius: 50%" src="${basePath}/resources/img/userInfo/150x150_head_portrait.jpg">
         <div class="slogan">
             <h2>${userResume.username}</h2>
             <p>${userResume.signature}</p></div>
@@ -38,22 +33,17 @@
 
     <div class="box">
         <div class="title">关于我</div>
-        <%--<img src="http://r02.abcmoban.com/content/2-about/banner.jpg">--%>
-        <img src="${nginx}userInfo/about_me.jpg">
-        <p style="text-align: left"><%--${userResume.desc_nature}--%>
+        <img src="${basePath}/resources/img/userInfo/about_me.jpg">
+        <p style="text-align: left">
                  ● 热爱软件事业，对IT领域的软件开发和设计工作有浓厚的兴趣，能承受较大的工作压力。
             <br/>● 自学能力强，有比较强的动手能力，勇于面对困难和挑战，有很好的分析问题与解决问题的能力。
             <br/>● 工作认真负责，交代的任务，会尽善尽美的完成，积极上进，能够吃苦耐劳，有良好的职业素质。
             <br/>● 在近三年的工作中，都能完成上级交与的任务，并且遇到困难自己都能通过各种途径解决问题！
         </p>
         <p>
-            <%--<c:forEach items="${userResume.contact_way}" var="way">
-                <a href="#">${way.name}：${way.option}</a>
-            </c:forEach>--%>
-
             <a href="#">微信订阅号：ssln_2015【似水流年】</a><br/>
             <a href="#">E-mail：376288755@qq.com</a><br/>
-            <a href="#">Tel：13161177229</a><br/>
+            <a href="#">Tel：13256602806</a><br/>
             <a href="#">QQ：376288755</a><br/>
             <%--<a href="#">个人站点：开发中~~~</a>--%>
         </p>
@@ -65,7 +55,6 @@
             <div class="info-box">
                 <a href="javascript:void(0);" target="_blank">
                     <div class="box-img">
-                        <%--<img src="http://r02.abcmoban.com/thumbs/2-db5c0dc0f968c6204e1a0ae7d830700e.jpg"/>--%>
                             <img src="${basePath}/resources/img/userInfo/bird_nest.jpg">
                     </div>
                 </a>
@@ -82,7 +71,6 @@
             <div class="info-box">
                 <a href="javascript:void(0);" target="_blank">
                     <div class="box-img">
-                        <%--<img src="http://r02.abcmoban.com/thumbs/3-73ef56817d229fc90612952294682309.jpg"/>--%>
                             <img src="${basePath}/resources/img/userInfo/water_cube.jpg">
                     </div>
                 </a>
@@ -97,7 +85,6 @@
             <div class="info-box">
                 <a href="javascript:void(0);" target="_blank">
                     <div class="box-img">
-                        <%--<img src="http://r02.abcmoban.com/thumbs/3-73ef56817d229fc90612952294682309.jpg"/>--%>
                             <img src="${basePath}/resources/img/userInfo/exquisite_pagoda.jpg">
                     </div>
                 </a>

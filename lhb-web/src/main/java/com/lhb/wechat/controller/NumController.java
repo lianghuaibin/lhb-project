@@ -35,16 +35,11 @@ public class NumController {
     public String getHtml(HttpServletRequest req){
         Map<String,Object> userResume = new HashMap<String, Object>();
         try{
-            String nginx = systemConstant.getNginxAddr();
-            req.setAttribute("nginx",nginx);
             LhbUser user = lhbUserService.findById(1L);
-            user.setHeadPortrait(nginx+user.getHeadPortrait());
-            user.setCover(nginx+user.getCover());
             req.setAttribute("userResume", user);
         }catch (Exception e){
             LogUtil.error(e);
         }
-
         LogUtil.paramAndResult("-getHtml-", "", userResume == null ? "[]":userResume.toString());
         return "/jsp/userInfo/resume.jsp";
     }
