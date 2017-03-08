@@ -142,11 +142,7 @@
             </activation>
             <properties>
                 <!-- 数据库连接配置 -->
-                <!--<jr.database.file>props/dev/db.propertoes</jr.database.file>-->
-                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-                <mysql.default.url>jdbc:mysql://123.57.69.90:3306/lhb</mysql.default.url>
-                <mysql.default.username>root</mysql.default.username>
-                <mysql.default.password>Bin*#220807#</mysql.default.password>
+                <jr.database.file>props/dev/db.properties</jr.database.file>
                 <!-- 系统参数 -->
                 <jr.important.file>props/dev/important.properties</jr.important.file>
             </properties>
@@ -155,10 +151,7 @@
             <id>pro</id>
             <properties>
                 <!-- 数据库连接配置 -->
-                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-                <mysql.default.url>jdbc:mysql://123.57.69.90:3306/lhb</mysql.default.url>
-                <mysql.default.username>root</mysql.default.username>
-                <mysql.default.password>Bin*#220807#</mysql.default.password>
+                <jr.database.file>props/pro/db.properties</jr.database.file>
                 <!-- 系统参数 -->
                 <jr.important.file>props/pro/important.properties</jr.important.file>
             </properties>
